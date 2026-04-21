@@ -1,0 +1,56 @@
+:root {
+    --sage-600: #889E81;
+    --sage-700: #6B7F66;
+    --accent: #D1495B; /* Hibiscus Red */
+    --glass: rgba(255, 255, 255, 0.4);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1, h2, .font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.glass {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.bg-sage-700 { background-color: var(--sage-700); }
+.text-sage-800 { color: #3d4a39; }
+.text-accent { color: var(--accent); }
+
+.bg-floral-gradient {
+    background: radial-gradient(circle at top right, #fdf2f2, transparent);
+}
+
+/* pH Slider Styling */
+#phSlider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid var(--sage-600);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Subscription Toggle Animation */
+.active-toggle {
+    background-color: var(--sage-600) !important;
+}
+.active-toggle div {
+    transform: translateX(24px);
+}
+
+@keyframes grow {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+#gardenDisplay div {
+    animation: grow 1s ease-out forwards;
+}
